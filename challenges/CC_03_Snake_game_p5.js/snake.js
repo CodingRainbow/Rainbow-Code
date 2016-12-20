@@ -22,8 +22,12 @@ function Snake() {
   }
 
   this.dir = function(x, y) {
-    this.xspeed = x;
-    this.yspeed = y;
+    if(this.xspeed != -1*x) {
+      this.xspeed = x;
+    } 
+    if(this.yspeed != -1*y) {
+      this.yspeed = y;
+    }
   }
 
   this.death = function() {
